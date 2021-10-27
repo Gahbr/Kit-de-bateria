@@ -38,3 +38,10 @@ document.querySelector('.composer button').addEventListener('click',() => {
 
         }
     }
+
+    document.querySelectorAll('.key').forEach(element => {  //tocar notas no click também 
+        element.addEventListener('click', () => {
+            const clickedKey = element.getAttribute('data-key')
+            playSound(clickedKey)
+        })
+    })
